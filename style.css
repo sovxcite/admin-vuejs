@@ -1,0 +1,19 @@
+h1 {
+    text-align: center;
+}
+.table {
+    border: 1px solid #000;
+    width: 800px;
+    margin: 20px auto;
+}
+.row {
+    width: 100%;
+}
+.firstname, .lastname, .avatar {
+    display: inline-flex;
+    width: 33%;
+}
+.avatar img {
+    height: 100px;
+    width: 100px;
+}

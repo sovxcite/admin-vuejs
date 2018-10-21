@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ title }}</h1>
+        <div class="table">
+            <div class="row" v-for="user in users" v-bind:key="user.first_name">
+                <div class="firstname">{{user.first_name}}</div>
+                <div class="lastname">{{user.last_name}}</div>
+                <div class="avatar">
+                    <img v-bind:src="user.avatar_url" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var app = new Vue({
+        el: '#app',
+            data: function() {
+                return {
+                    title: 'Admin Vue',
+                    users: [{
+                        first_name: 'Вадим',
+                        last_name: 'Галкин',
+                        avatar_url: 'https://ui-avatars.com/api/?name=Вадим+Галкин'
+                    },
+                    {
+                        first_name: 'Вадим',
+                        last_name: 'Танасийчук',
+                        avatar_url: 'https://ui-avatars.com/api/?name=Вадим+Танасийчук'
+                    },
+                    {
+                        first_name: 'Федор',
+                        last_name: 'Емельяненко',
+                        avatar_url: 'https://ui-avatars.com/api/?name=Ф+Е'
+                    },
+                    {
+                        first_name: 'Чейл',
+                        last_name: 'Соннен',
+                        avatar_url: 'https://ui-avatars.com/api/?name=Ч+С'
+                    },
+                    {
+                        first_name: 'Конор',
+                        last_name: 'МакГрегор',
+                        avatar_url: 'https://ui-avatars.com/api/?name=Конор+МакГрегор'
+                    }]
+                };
+            }
+        })
+    </script>
+</body>
+</html>
