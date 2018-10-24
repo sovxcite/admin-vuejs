@@ -1,0 +1,26 @@
+{
+  "name": "admin-vuejs",
+  "version": "1.0.0",
+  "description": "Project created for learning purposes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-mockapi": "json-server --watch mock-server/db.json --port 3001"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sovxcite/admin-vuejs.git"
+  },
+  "keywords": [
+    "vue"
+  ],
+  "author": "bogdan grebeniuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sovxcite/admin-vuejs/issues"
+  },
+  "homepage": "https://github.com/sovxcite/admin-vuejs#readme",
+  "devDependencies": {
+    "json-server": "^0.14.0"
+  }
+}
