@@ -5,42 +5,28 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import UserList from "@/components/UserList.vue";
+import axios from "axios";
 
 export default {
   name: "users",
   components: {
     UserList
   },
+  mounted() {
+      this.loadUsers();
+  },
+  methods: {
+      loadUsers() {
+          axios.get('http://localhost:3001/users')
+          .then(response => this.users = response.data)
+          .catch(error => console.error(error));
+      }
+  },
     data: function() {
         return {
-            users: [{
-                first_name: 'Вадим',
-                last_name: 'Галкин',
-                avatar_url: 'https://ui-avatars.com/api/?name=Вадим+Галкин'
-            },
-            {
-                first_name: 'Василий',
-                last_name: 'Танасийчук',
-                avatar_url: 'https://ui-avatars.com/api/?name=Вадим+Танасийчук'
-            },
-            {
-                first_name: 'Федор',
-                last_name: 'Емельяненко',
-                avatar_url: 'https://ui-avatars.com/api/?name=Ф+Е'
-            },
-            {
-                first_name: 'Чейл',
-                last_name: 'Соннен',
-                avatar_url: 'https://ui-avatars.com/api/?name=Ч+С'
-            },
-            {
-                first_name: 'Конор',
-                last_name: 'МакГрегор',
-                avatar_url: 'https://ui-avatars.com/api/?name=Конор+МакГрегор'
-            }]
-        };
+            users: []
+        }
     }
 };
 </script>

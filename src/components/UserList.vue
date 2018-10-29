@@ -9,11 +9,11 @@
         </tr>
     </thead>
     <tbody>
-        <tr v-for="(user, index) in users" v-bind:key="user.first_name">
+        <tr v-for="(user, index) in users" v-bind:key="user.id">
         <th scope="row">{{index}}</th>
-        <td>{{user.first_name}}</td>
-        <td>{{user.last_name}}</td>
-        <td><img v-bind:src="user.avatar_url"></td>
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td><img v-bind:src="user.picture"></td>
         </tr>
     </tbody>
   </table>
