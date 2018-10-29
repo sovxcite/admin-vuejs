@@ -29,3 +29,8 @@ npm run lint
 ```
 npm run test:unit
 ```
+
+### Run fake api
+```
+npm run mockapi
+```
