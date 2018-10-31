@@ -1,6 +1,7 @@
 <template>
   <div>
-    <user-list v-bind:users="users"></user-list>
+    <h1>Users :</h1>
+    <user-list v-bind:users="users" @remove-user="removeUser"></user-list>
   </div>
 </template>
 
@@ -20,6 +21,11 @@ export default {
       loadUsers() {
           axios.get('http://localhost:3001/users')
           .then(response => this.users = response.data)
+          .catch(error => console.error(error));
+      },
+      removeUser(id) {
+          axios.delete(`http://localhost:3001/users/${id}`)
+          .then(() => this.loadUsers())
           .catch(error => console.error(error));
       }
   },

@@ -1,21 +1,5 @@
 {
-  "users":[
-    {
-      "id": 0,
-      "isActive": false,
-      "balance": "$2,764.51",
-      "picture": "http://placehold.it/128x128",
-      "age": 34,
-      "accessLevel": "admin",
-      "firstName": "Mollie",
-      "lastName": "Garrison",
-      "company": "MYOPIUM",
-      "email": "mollie.garrison@myopium.us",
-      "phone": "+7 (966) 600-3824",
-      "address": "755 Dunne Place, Klagetoh, Northern Mariana Islands, 5203",
-      "about": "Dolore voluptate veniam proident nulla aute dolore. Pariatur anim duis officia velit. Consectetur nisi est dolore aliquip.",
-      "registered": "17.01.2018"
-    },
+  "users": [
     {
       "id": 1,
       "isActive": false,
@@ -49,22 +33,6 @@
       "registered": "15.03.2017"
     },
     {
-      "id": 3,
-      "isActive": true,
-      "balance": "$2,556.12",
-      "picture": "http://placehold.it/128x128",
-      "age": 36,
-      "accessLevel": "user",
-      "firstName": "Debora",
-      "lastName": "Burris",
-      "company": "KINDALOO",
-      "email": "debora.burris@kindaloo.io",
-      "phone": "+7 (998) 442-3958",
-      "address": "366 Myrtle Avenue, Riverton, Texas, 5284",
-      "about": "Deserunt aute adipisicing tempor voluptate. Eu sunt et non ut sit ut Lorem laborum occaecat reprehenderit. Id et aliquip ullamco sunt. Do aliqua commodo culpa fugiat veniam Lorem ut aute sit officia ex aliquip laborum.",
-      "registered": "31.03.2018"
-    },
-    {
       "id": 4,
       "isActive": true,
       "balance": "$1,503.54",
@@ -79,38 +47,6 @@
       "address": "652 Nostrand Avenue, Orovada, Wyoming, 2092",
       "about": "Deserunt ex non sit adipisicing mollit adipisicing. Laboris sit pariatur ut ut in qui. Laborum laboris est enim incididunt veniam qui fugiat qui non velit fugiat pariatur irure.",
       "registered": "27.01.2017"
-    },
-    {
-      "id": 5,
-      "isActive": true,
-      "balance": "$2,708.70",
-      "picture": "http://placehold.it/128x128",
-      "age": 28,
-      "accessLevel": "admin",
-      "firstName": "Elva",
-      "lastName": "Doyle",
-      "company": "ACLIMA",
-      "email": "elva.doyle@aclima.net",
-      "phone": "+7 (808) 507-3057",
-      "address": "559 Newkirk Placez, Delshire, Maine, 3637",
-      "about": "Duis ipsum aute incididunt nostrud. Aliquip cillum qui deserunt nulla pariatur proident commodo et Lorem excepteur. Dolore mollit ea magna aute est nostrud.",
-      "registered": "28.10.2014"
-    },
-    {
-      "id": 6,
-      "isActive": false,
-      "balance": "$2,800.35",
-      "picture": "http://placehold.it/128x128",
-      "age": 20,
-      "accessLevel": "admin",
-      "firstName": "Faye",
-      "lastName": "Howe",
-      "company": "HOUSEDOWN",
-      "email": "faye.howe@housedown.co.uk",
-      "phone": "+7 (803) 423-2596",
-      "address": "387 Howard Place, Clinton, New Mexico, 6226",
-      "about": "Culpa consequat eiusmod amet nostrud. Sunt nisi laborum non eu ipsum quis mollit dolor nostrud esse veniam nulla ipsum. Esse velit pariatur occaecat ea in ut duis elit. Reprehenderit ullamco laboris incididunt tempor qui. Sunt magna do ipsum aliquip labore mollit. Irure veniam adipisicing nisi laboris ex consequat aute.",
-      "registered": "26.01.2018"
     },
     {
       "id": 7,

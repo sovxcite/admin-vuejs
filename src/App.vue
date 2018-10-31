@@ -7,14 +7,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-          <router-link to="/" tag="li" class="nav-item" active-class="active" exact>
-            <a class="nav-link">Home</a>
-          </router-link>
           <router-link to="/users" tag="li" class="nav-item" active-class="active">
             <a class="nav-link">Users</a>
           </router-link>
-          <router-link to="/about" tag="li" class="nav-item" active-class="active">
-            <a class="nav-link">About</a>
+          <router-link to="/add-user" tag="li" class="nav-item" active-class="active">
+            <a class="nav-link">Add user</a>
           </router-link>
         </ul>
         <form class="form-inline mt-2 mt-md-0">
@@ -28,11 +25,13 @@
 </template>
 
 <style>
+body {
+  background-color: #eee !important;
+}
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 56px;
 }
