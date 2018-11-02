@@ -10,17 +10,16 @@
 import UserList from "@/components/UserList.vue";
 import PageSpinner from "@/components/PageSpinner.vue";
 import UserService from "@/services/UserService.js";
-import BasePageMixin from "@/base/BasePageMixin.js";
+import SpinnerMixin from "@/base/SpinnerMixin.js";
 
 export default {
   name: "users",
-  mixins: [BasePageMixin],
+  mixins: [SpinnerMixin],
   components: {
     UserList,
     PageSpinner
   },
   mounted() {
-      console.log(this.$data);
       this.loadUsers();
   },
   methods: {

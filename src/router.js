@@ -5,6 +5,7 @@ Vue.use(Router);
 
 export default new Router({
   routes: [
+    { path: "/", redirect: "/users" },
     {
       path: "/users",
       name: "users",

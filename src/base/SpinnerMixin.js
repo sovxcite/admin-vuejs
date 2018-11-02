@@ -1,14 +1,14 @@
 export default {
   data() {
     return {
-      BasePage: {
+      SpinnerMixin: {
         $semaphore: 0
       }
     };
   },
   computed: {
     isProcessing() {
-      return this.$data.BasePage.$semaphore > 0;
+      return this.$data.SpinnerMixin.$semaphore > 0;
     }
   },
   methods: {
@@ -18,11 +18,11 @@ export default {
       return promise;
     },
     $getSpinner() {
-      this.$data.BasePage.$semaphore++;
+      this.$data.SpinnerMixin.$semaphore++;
     },
     $releaseSpinner() {
-      this.$data.BasePage.$semaphore--;
-      if (this.$data.BasePage.$semaphore < 0) {
+      this.$data.SpinnerMixin.$semaphore--;
+      if (this.$data.SpinnerMixin.$semaphore < 0) {
         throw new Error("Spinner semaphore: illegal operation");
       }
     }
