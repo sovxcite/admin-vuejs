@@ -7,7 +7,7 @@ export default {
     return axios.get(`${BASE_URL}/users`);
   },
   getUsersPage(pageNumber, limit = 20) {
-    return axios.get(`${BASE_URL}/users??_page=${pageNumber}&_limit=${limit}`);
+    return axios.get(`${BASE_URL}/users?_page=${pageNumber}&_limit=${limit}`);
   },
   getUser(id) {
     return axios.get(`${BASE_URL}/users/${id}`);
