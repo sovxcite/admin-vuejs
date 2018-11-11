@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" v-if="navbar">
       <a class="navbar-brand" href="#">Admin-vuejs</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -23,6 +23,17 @@
     <router-view/>
   </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    navbar() {
+      return this.$route.meta.navbar;
+    }
+  }
+}
+</script>
+
 
 <style>
 body {

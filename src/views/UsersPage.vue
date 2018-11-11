@@ -37,18 +37,17 @@ export default {
           this.users = null;
           this.pageNum = page;
           this.pageSize = pageSize;
-          this.invoke(UserService.getUsers())
-          .then(response => {
-              this.itemsCount = response.data.length;
-              return UserService.getUsersPage(page, pageSize);
+          this.invoke(UserService.getUsersPage(page, pageSize))
+          .then(response => { 
+              this.itemsCount = parseInt(response.headers["x-total-count"]);
+              this.users = response.data; 
           })
-          .then(response => this.users = response.data)
           .catch(error => console.error(error));
       },
       removeUser(id) {
           this.users = null;
           this.invoke(UserService.removeUser(id))
-          .then(() => this.loadUsers())
+          .then(() => this.loadPage(this.pageNum, this.pageSize))
           .catch(error => console.error(error));
       }
   },
