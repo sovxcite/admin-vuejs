@@ -15,8 +15,9 @@
           </router-link>
         </ul>
         <form class="form-inline mt-2 mt-md-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" v-if="0">
+          <div class="white">Hello, {{userName}} </div>
+          <button class="btn btn-outline-success my-2 my-sm-0" type="button" @click="signOut">Sign out</button>
         </form>
       </div>
     </nav>
@@ -25,10 +26,24 @@
 </template>
 
 <script>
+import AuthService from "@/services/AuthService.js";
+
 export default {
   computed: {
     navbar() {
       return this.$route.meta.navbar;
+    },
+    userName() {
+      return AuthService.userName;
+    },
+    isAuthorized() {
+      return AuthService.isAuthorized();
+    }
+  },
+  methods: {
+    signOut() {
+      AuthService.signOut();
+      this.$router.push({ name: "signin"})
     }
   }
 }
@@ -36,6 +51,10 @@ export default {
 
 
 <style>
+.white {
+  color: #eee;
+  margin-right: 15px;
+}
 body {
   background-color: #eee !important;
 }

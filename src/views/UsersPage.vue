@@ -37,7 +37,7 @@ export default {
           this.users = null;
           this.pageNum = page;
           this.pageSize = pageSize;
-          this.invoke(UserService.getUsersPage(page, pageSize))
+          this.invoke(UserService.getUsersPage(page - 1, pageSize))
           .then(response => { 
               this.itemsCount = parseInt(response.headers["x-total-count"]);
               this.users = response.data; 

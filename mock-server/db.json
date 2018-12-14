@@ -61,8 +61,8 @@
       "email": "lewis.bennett@permadyne.biz",
       "phone": "+7 (903) 594-2739",
       "address": "711 Waldorf Court, Villarreal, Kansas, 366",
-      "about": "Mollit reprehenderit nisi irure cillum labore Lorem velit. Consectetur consequat sit occaecat Lorem adipisicing amet consequat exercitation labore eiusmod dolore sint. Eu duis laboris aliquip Lorem id excepteur nostrud amet.",
-      "registered": "12.09.2017"
+      "about": "<p>Mollit reprehenderit nisi irure cillum labore Lorem velit. Consectetur consequat sit occaecat Lorem adipisicing amet consequat exercitation labore eiusmod dolore sint. Eu duis laboris aliquip Lorem id excepteur nostrud amet.</p>",
+      "registered": "15.09.2017"
     },
     {
       "id": 7,
@@ -1559,6 +1559,15 @@
       "address": "Проспект Мира 44",
       "email": "sov.xcite@gmail.com",
       "id": 100
+    },
+    {
+      "picture": "http://placehold.it/128x128",
+      "isActive": true,
+      "firstName": "Богдан",
+      "lastName": "Гребенюк",
+      "address": "Проспект Мира 44",
+      "email": "sov.xcite@gmail.com",
+      "id": 101
     }
   ]
 }

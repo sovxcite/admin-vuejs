@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
+import AuthService from "@/services/AuthService.js";
 
 Vue.use(Router);
 
@@ -35,7 +36,7 @@ const router = new Router({
 
 const openRoutes = ["signin"];
 router.beforeEach((to, from, next) => {
-  const autorized = true;
+  const autorized = AuthService.isAuthenticated();
 
   if (openRoutes.includes(to.name) || autorized) {
     next();

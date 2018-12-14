@@ -6,12 +6,14 @@
       </div>
 
       <div class="form-label-group">
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
+                            v-model="user.email" required="" autofocus="">
         <label for="inputEmail">Email address</label>
       </div>
 
       <div class="form-label-group">
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password"
+                            v-model="user.password" required="">
         <label for="inputPassword">Password</label>
       </div>
 
@@ -20,19 +22,45 @@
           <input type="checkbox" value="remember-me"> Remember me
         </label>
       </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <button class="btn btn-lg btn-primary btn-block" type="button" @click="signIn">Sign in</button>
+      <div class="alert alert-danger margin" role="alert" v-if="error">
+        {{error}}
+      </div>
       <p class="mt-5 mb-3 text-muted text-center">© 2017-2018</p>
     </form>
 </template>
 
 <script>
+import AuthService from "@/services/AuthService.js";
+
 export default {
-  name: "signin"
+  name: "signin",
+  methods: {
+    signIn() {
+      this.error = null;
+      AuthService.signIn(this.user.email, this.user.password)
+      .then(data => {
+        this.$router.push({ name: "users"})
+      }).catch(error => {
+        this.error = error.response.data.error;
+      });
+    }
+  },
+  data: function () {
+    return {
+      user: {},
+      error: null
+    }
+  }
 }
 </script>
 
 
 <style scoped>
+.margin {
+  margin-top: 20px;
+}
+
 .form-signin {
   width: 100%;
   max-width: 420px;
